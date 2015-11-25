@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render 'shared/page_header' %>
+    <%= themeable_stylesheet_link_tag :theme %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%=h page_title %></title>
+  </head>
+
+  <body id="default">
+    <div class="navbar-background">
+      <%= image_tag "woodenbackground.jpg" %>
+      <div class="navbar-background-title" id="navbar-background-middle" style="width:100%;text-align:center;"><%= @page_title %></div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand white-logo" href="/">
+        <%= image_tag "bbjo_logo_white.png" %>
+          </a>
+          <a class="navbar-brand color-logo" href="/">
+        <%= image_tag "bbjo_logo_color.png" %>
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/shop">SHOP</a></li>
+            <li class="dropdown">
+              <a class="nav-title unscrolled exclude-spinner" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GET INSPIRED</a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/encouragement">ENCOURAGEMENT</a></li>
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/congratulations">CONGRATULATIONS</a></li>
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/accomplishment">ACCOMPLISHMENT</a></li>
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/love">LOVE</a></li>
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/thank-you">THANK YOU</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="nav-title unscrolled exclude-spinner" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">STORY</a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/be-it">BE IT</a></li>
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/want-it">WANT IT</a></li>
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/have-it">HAVE IT</a></li>
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/need-it">NEED IT</a></li>
+                <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/seek-it">SEEK IT</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-title unscrolled" href="http://blog.brandedbyjotto.com">BLOG</a></li>
+            <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/contact">CONTACT</a></li>
+            <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/account"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="glyphicon-title">ACCOUNT</span></a></li>
+            <li><a class="nav-title unscrolled" href="http://brandedbyjotto.com/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span class="glyphicon-title">CART</span></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div id="main" class="row">
+      <div class="header">
+        <h1><%= link_to this_blog.blog_name, this_blog.base_url %></h1>
+        <p class="desc"><%= this_blog.blog_subtitle %></p>
+      </div>
+        <%= yield %>
+
+    </div>
+    <div class="footer row">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>About Branded by J.Otto</h3>
+          <p>Our vision is to create an experience that will leave a mark, a mark that matters. We pair well-crafted apparel and meaningful messages to help you show up when it matters most, during life's peaks, valleys, and everything in between.</p>
+        </div>
+        <div class="col-md-3">
+          <h3>Get in Touch</h3>
+          <p>302 7th Street NE #3<br/>Buffalo, MN 55313</p>
+          <p>800-214-2510</p>
+          <p>info@brandedbyjotto.com</p>
+        </div>
+        <div class="col-md-3">
+          <h3>Links</h3>
+          <p><a href="http://brandedbyjotto.com/account">My Account</a></p>
+          <p><a href="http://brandedbyjotto.com/shipping-details">Shipping Details</a></p>
+          <p><a href="http://brandedbyjotto.com/returns-exchanges">Returns & Exchanges</a></p>
+          <p><a href="http://brandedbyjotto.com/faq">Frequently Asked Questions</a></p>
+          <p><a href="http://brandedbyjotto.com/contact">Contact Us</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <p>© 2015 BRANDED BY J. OTTO, LLC. ALL RIGHTS RESERVED. DESIGN | JR.</p>
+      </div>
+    </div>
+    <div class="spinner-wrapper">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+  </body>
+</html>
