@@ -85,7 +85,7 @@ en:
       posted_in: "Posted in"
       no_articles_found: "No articles found"
     read:
-      comments_are_disabled: "Comments are disabled"
+      comments_are_disabled: ""
       trackbacks_for: "Trackbacks for"
       trackbacks_are_disabled: "Trackbacks are disabled"
       if_you_liked_this_article_you_can: "If you liked this article you can %{add_twitter}"
@@ -96,7 +96,7 @@ en:
       comments: "Comments"
       leave_a_response: "Leave a response"
       rss_feed: "RSS feed"
-      comments_are_disabled: "Comments are disabled"
+      comments_are_disabled: ""
     comment_form:
       required: "required"
       leave_a_comment: "Leave a comment"
